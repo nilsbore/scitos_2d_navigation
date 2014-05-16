@@ -79,10 +79,10 @@ namespace clear_voxels_recovery {
                                         double pose_x, double pose_y){
         boost::unique_lock< boost::shared_mutex > lock(*(costmap->getLock()));
 
-        double reset_distance = 1.0;
-        double start_point_x = pose_x; // - reset_distance / 2.0;
+        double reset_distance = 1.2;
+        double start_point_x = pose_x - reset_distance / 2.0;
         double start_point_y = pose_y - reset_distance / 2.0;
-        double end_point_x = start_point_x + reset_distance / 2.0;
+        double end_point_x = start_point_x + reset_distance;
         double end_point_y = start_point_y + reset_distance;
 
         int start_x, start_y, end_x, end_y;
