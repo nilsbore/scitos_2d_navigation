@@ -26,8 +26,8 @@ chest_obstacle_layer:
   
   origin_z: -0.08
   z_resolution: 0.2
-  z_voxels: 9
-  unknown_threshold: 9
+  z_voxels: 6
+  unknown_threshold: 6
   mark_threshold: 0
   
   observation_sources: point_cloud_sensor clear_sensor cliff_sensor
