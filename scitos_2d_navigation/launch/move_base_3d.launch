@@ -56,7 +56,8 @@
         <param name="controller_frequency" value="10.0" />
         <param name="controller_patience" value="15.0" />
         <param name="planner_frequency" value="2.0" />
-        <param name="clearing_rotation_allowed" value="false" />
+        <!-- <param name="clearing_rotation_allowed" value="false" /> -->
+        <rosparam param="recovery_behaviors"> [{name: "conservative_reset", type: "clear_costmap_recovery/ClearCostmapRecovery"}, {name: "clear_voxels", type: "clear_voxels_recovery/ClearVoxelsRecovery"}, {name: "aggressive_reset", type: "clear_costmap_recovery/ClearCostmapRecovery"}] </rosparam>
         <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params_3d/costmap_common_params.yaml" command="load" ns="global_costmap" />
         <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params_3d/costmap_common_params.yaml" command="load" ns="local_costmap" />
         <rosparam file="$(find scitos_2d_navigation)/scitos_move_base_params_3d/local_costmap_params.yaml" command="load" />

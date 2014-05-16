@@ -1,0 +1,7 @@
+<library path="lib/libclear_voxels_recovery">
+  <class name="clear_voxels_recovery/ClearVoxelsRecovery" type="clear_voxels_recovery::ClearVoxelsRecovery" base_class_type="nav_core::RecoveryBehavior">
+    <description>
+      A recovery behavior that makes the robot run backwards to a previously visited point with the help of head camera.
+    </description>
+  </class>
+</library>

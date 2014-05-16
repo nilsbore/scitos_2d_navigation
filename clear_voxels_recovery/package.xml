@@ -1,13 +1,9 @@
 <?xml version="1.0"?>
 <package>
-  <name>scitos_2d_navigation</name>
+  <name>clear_voxels_recovery</name>
   <version>0.0.2</version>
   <description>
-    This package contains components for using the ROS move base together
-    with the Scitos G5 robot. There is options for running obstacle avoidance
-    both with only laser and with an additional depth-sensing camera
-    mounted in front. The additional nodes in the package are for processing
-    the incoming clouds from the camera for obstacle avoidance.
+    This package contains a recovery behavior that clears the occupied voxels right in front of the robot.
   </description>
 
   <!-- One maintainer tag required, multiple allowed, one person per tag -->
@@ -32,23 +28,25 @@
   <buildtool_depend>catkin</buildtool_depend>
   <build_depend>sensor_msgs</build_depend>
   <build_depend>roscpp</build_depend>
+  <build_depend>costmap_2d</build_depend>
   <build_depend>std_msgs</build_depend>
   <build_depend>pcl_ros</build_depend>
   <build_depend>libpcl-all-dev</build_depend>
+  <build_depend>nav_core</build_depend>
+  <build_depend>pluginlib</build_depend>
   <build_depend>tf</build_depend>
   <run_depend>sensor_msgs</run_depend>
   <run_depend>roscpp</run_depend>
+  <run_depend>costmap_2d</run_depend>
   <run_depend>std_msgs</run_depend>
   <run_depend>pcl_ros</run_depend>
   <run_depend>libpcl-all</run_depend>
+  <run_depend>nav_core</run_depend>
+  <run_depend>pluginlib</run_depend>
   <run_depend>tf</run_depend>
 
   <!-- The export tag contains other, unspecified, tags -->
   <export>
-    <!-- You can specify that this package is a metapackage here: -->
-    <!-- <metapackage/> -->
-
-    <!-- Other tools can request additional information be placed here -->
-
+      <nav_core plugin="${prefix}/cvr_plugin.xml" />
   </export>
 </package>
