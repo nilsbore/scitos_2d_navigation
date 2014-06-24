@@ -30,7 +30,7 @@
         <param name="obstacle_output" value="/move_base/points_clearing"/>
         <param name="floor_output" value="/move_base/points_cliff"/>
         <!-- Distance below floor that's counted as stair -->
-        <param name="below_threshold" value="0.05"/>
+        <param name="below_threshold" value="0.12"/>
     </node>
 
     <!-- This node removes the desired cutoff pixels from the cloud edges -->
